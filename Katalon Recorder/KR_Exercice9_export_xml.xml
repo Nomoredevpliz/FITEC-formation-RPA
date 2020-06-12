@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase>
+<selenese>
+	<command>open</command>
+	<target><![CDATA[http://localhost:51/servlets/com.mercurytours.servlet.WelcomeServlet]]></target>
+	<value><![CDATA[]]></value>
+</selenese>
+<selenese>
+	<command>type</command>
+	<target><![CDATA[name=userName]]></target>
+	<value><![CDATA[selenium_user]]></value>
+</selenese>
+<selenese>
+	<command>type</command>
+	<target><![CDATA[name=password]]></target>
+	<value><![CDATA[framework]]></value>
+</selenese>
+<selenese>
+	<command>click</command>
+	<target><![CDATA[name=login]]></target>
+	<value><![CDATA[]]></value>
+</selenese>
+<selenese>
+	<command>select</command>
+	<target><![CDATA[name=passCount]]></target>
+	<value><![CDATA[3]]></value>
+</selenese>
+<selenese>
+	<command>click</command>
+	<target><![CDATA[name=findFlights]]></target>
+	<value><![CDATA[]]></value>
+</selenese>
+<selenese>
+	<command>click</command>
+	<target><![CDATA[name=reserveFlights]]></target>
+	<value><![CDATA[]]></value>
+</selenese>
+<selenese>
+	<command>store</command>
+	<target><![CDATA[0]]></target>
+	<value><![CDATA[i]]></value>
+</selenese>
+<selenese>
+	<command>while</command>
+	<target><![CDATA[(storedVars.i < 3)]]></target>
+	<value><![CDATA[]]></value>
+</selenese>
+<selenese>
+	<command>echo</command>
+	<target><![CDATA[itération: ${i}]]></target>
+	<value><![CDATA[red]]></value>
+</selenese>
+<selenese>
+	<command>loadVars</command>
+	<target><![CDATA[KR_passengers_data.csv]]></target>
+	<value><![CDATA[]]></value>
+</selenese>
+<selenese>
+	<command>type</command>
+	<target><![CDATA[name=passFirst${i}]]></target>
+	<value><![CDATA[${prenom}]]></value>
+</selenese>
+<selenese>
+	<command>type</command>
+	<target><![CDATA[name=passLast${i}]]></target>
+	<value><![CDATA[${nom}]]></value>
+</selenese>
+<selenese>
+	<command>storeEval</command>
+	<target><![CDATA[${i} + 1]]></target>
+	<value><![CDATA[i]]></value>
+</selenese>
+<selenese>
+	<command>endLoadVars</command>
+	<target><![CDATA[KR_passengers_data.csv]]></target>
+	<value><![CDATA[]]></value>
+</selenese>
+<selenese>
+	<command>endWhile</command>
+	<target><![CDATA[]]></target>
+	<value><![CDATA[]]></value>
+</selenese>
+<selenese>
+	<command>echo</command>
+	<target><![CDATA[C'est fini]]></target>
+	<value><![CDATA[green]]></value>
+</selenese>
+<selenese>
+	<command>type</command>
+	<target><![CDATA[name=creditnumber]]></target>
+	<value><![CDATA[1234]]></value>
+</selenese>
+<selenese>
+	<command>click</command>
+	<target><![CDATA[name=buyFlights]]></target>
+	<value><![CDATA[]]></value>
+</selenese>
+<selenese>
+	<command>click</command>
+	<target><![CDATA[link=SIGN-OFF]]></target>
+	<value><![CDATA[]]></value>
+</selenese>
+</TestCase>
